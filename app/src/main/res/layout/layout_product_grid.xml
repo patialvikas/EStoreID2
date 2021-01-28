@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+
+    android:layout_margin="@dimen/_3sdp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/colorWhite"
+        app:cardElevation="@dimen/_5sdp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/product_image"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_120sdp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_launcher_background"
+                tools:ignore="ContentDescription" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/product_image"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:layout_marginRight="@dimen/_12sdp"
+                android:layout_marginBottom="@dimen/_5sdp">
+
+                <TextView
+                    android:id="@+id/product_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="Nike Shoes"
+                    android:fontFamily="@font/robotomedium"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_10ssp" />
+
+
+                <TextView
+                    android:id="@+id/product_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/product_name"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="₹99.95"
+                    android:fontFamily="@font/robotoregular"
+                    android:textColor="@color/colorOrange"
+                    android:textSize="@dimen/_10ssp" />
+
+                <TextView
+                    android:id="@+id/product_original_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/product_price"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:text="₹120.95"
+                    android:fontFamily="@font/robotoregular"
+                    android:textColor="@color/colorTextGrey"
+                    android:textSize="@dimen/_10ssp" />
+
+                <TextView
+                    android:id="@+id/product_discountper"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/product_price"
+                    android:layout_alignTop="@+id/product_original_price"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_toRightOf="@id/product_original_price"
+                    android:text="50% off"
+                    android:fontFamily="@font/robotoregular"
+                    android:textColor="@color/colorGreen"
+                    android:textSize="@dimen/_10ssp" />
+
+                <androidx.appcompat.widget.AppCompatRatingBar
+                    android:id="@+id/product_rating"
+                    style="@style/Widget.AppCompat.RatingBar.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/product_discountper"
+                    android:layout_marginLeft="-12dp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:progressTint="@color/colorBlue"
+                    android:rating="5"
+                    android:scaleX=".7"
+                    android:scaleY=".7" />
+
+
+                <TextView
+                    android:id="@+id/products_review"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/product_discountper"
+                    android:layout_marginLeft="@dimen/_3sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:textSize="@dimen/_10ssp"
+                    android:fontFamily="@font/robotoregular"
+                    android:layout_toRightOf="@id/product_rating"
+                    android:text="(40)" />
+
+
+                <ImageButton
+                    android:id="@+id/product_add_to_fav"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/product_name"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_marginTop="20dp"
+                    android:visibility="gone"
+                    android:layout_toLeftOf="@id/product_add_to_cart"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_midium_fav" />
+
+                <ImageButton
+                    android:id="@+id/product_add_to_cart"
+                    android:layout_width="wrap_content"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/product_name"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="20dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_midium_cart" />
+
+                <TextView
+                    android:id="@+id/product_brand"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/product_name"
+                    android:text="Nike"
+                    android:fontFamily="@font/robotoregular"
+                    android:textColor="@color/colorTextGrey"
+                    android:textSize="@dimen/_10ssp"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

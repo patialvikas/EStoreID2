@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_30sdp"
+    android:layout_margin="@dimen/_3sdp"
+    android:layout_gravity="left"
+    >
+
+
+        <RadioButton
+            android:id="@+id/rdgrb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:theme="@style/RadioButtonStyle"
+            android:textColorHint="@color/colorOrange" />
+        <TextView
+            android:id="@+id/rdvalue"
+
+            android:layout_width="wrap_content"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:text="readiovalue"
+
+
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="S"
+           android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+
+
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_12sdp"
+            android:fontFamily="@font/robotomedium"
+
+            android:id="@+id/product_price"></TextView>
+
+</LinearLayout>

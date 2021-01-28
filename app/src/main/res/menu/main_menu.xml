@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/ic_home"
+        android:title="Home" />
+    <item
+        android:id="@+id/myAccount"
+        android:icon="@drawable/ic_my_account"
+        android:title="My Account" />
+
+    <item
+        android:id="@+id/cart"
+        android:icon="@drawable/ic_carts"
+        android:title="Cart" />
+    <item
+        android:id="@+id/location"
+        android:icon="@drawable/ic_loco"
+        android:title="Location" />
+
+    <item
+        android:id="@+id/myorders"
+        android:icon="@drawable/ic_my_order"
+        android:title="My orders" />
+
+
+    <item
+        android:id="@+id/myfavoritestore"
+        android:icon="@drawable/ic_favrouit_store"
+        android:title="My favorite store" />
+
+    <item
+        android:id="@+id/settings"
+        android:icon="@drawable/ic_setting"
+        android:title="Settings" />
+
+    <item
+        android:id="@+id/qrcode"
+        android:icon="@drawable/ic_qrcode"
+        android:title="QR Code" />
+
+    <item
+        android:id="@+id/rewardcoinzone"
+        android:icon="@drawable/ic_reward"
+        android:title="Reward coin zone" />
+
+
+    <item
+        android:id="@+id/offerzone"
+        android:icon="@drawable/ic_offerzone"
+        android:title="Offer Zone" />
+
+    <item
+        android:id="@+id/language"
+        android:icon="@drawable/ic_language"
+        android:title="Language" />
+
+
+    <item
+        android:id="@+id/job"
+        android:icon="@drawable/ic_job"
+        android:title="Job" />
+
+
+    <item
+        android:id="@+id/logout"
+        android:icon="@drawable/ic_logout"
+        android:title="Log out" />
+
+</menu>

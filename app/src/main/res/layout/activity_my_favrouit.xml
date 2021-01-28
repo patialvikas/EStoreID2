@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.home.cartActivity.CartActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize">
+
+        <ImageView
+            android:id="@+id/imgBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/_8sdp"
+            android:src="@drawable/ic_back_black" />
+
+        <TextView
+            android:id="@+id/tvTittle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/favorities"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_16ssp"
+            android:visibility="visible" />
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/_3sdp"
+            android:layout_toLeftOf="@+id/imgCart"
+            android:layout_toRightOf="@+id/imgBack"
+            android:animateLayoutChanges="true"
+            android:iconifiedByDefault="false"
+            android:layoutDirection="rtl"
+            android:queryHint="Search View"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:background="@android:color/darker_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/_16sdp">
+
+                <RelativeLayout
+                    android:id="@+id/layout_cart_itme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/tvCartIitemsCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2 Itmes available"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_12ssp" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclterMyOrderList"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/tvCartIitemsCount"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:nestedScrollingEnabled="false"
+                        android:overScrollMode="never"
+                        android:scrollbars="none" />
+                </RelativeLayout>
+
+              <!--  <RelativeLayout
+                    android:id="@+id/layout_cart_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/tvSubTotal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:text="@string/c_sub_total" />
+
+                    <TextView
+                        android:id="@+id/tvSubTotalPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:text="₹200.00"
+                        android:textColor="@color/colorBlack" />
+
+                     <TextView
+                         android:id="@+id/tvTex"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_below="@id/tvSubTotal"
+                         android:layout_marginTop="@dimen/_12sdp"
+                         android:text="@string/c_tax" />
+
+                     <TextView
+                         android:id="@+id/tvTexPrice"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_below="@id/tvSubTotalPrice"
+                         android:layout_alignParentRight="true"
+                         android:layout_marginTop="@dimen/_12sdp"
+                         android:text="₹5.00"
+                         android:textColor="@color/colorBlack" />
+
+                    <TextView
+                        android:id="@+id/devliverycharge_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvSubTotal"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:text="@string/c_delivery_charge" />
+
+                    <TextView
+                        android:id="@+id/tvDevliverycharge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvSubTotalPrice"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:text="₹10.00"
+                        android:textColor="@color/colorBlack" />
+
+                    <View
+                        android:id="@+id/view2"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.8dp"
+                        android:layout_below="@id/tvDevliverycharge"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:background="@color/colorTextGrey" />
+
+                    <TextView
+                        android:id="@+id/tvTotal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/view2"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:text="@string/c_total"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_14ssp" />
+
+                    <TextView
+                        android:id="@+id/tvTotalPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/view2"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:text="₹210"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_14ssp" />
+
+                    <View
+                        android:id="@+id/view3"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.8dp"
+                        android:layout_below="@id/tvTotal"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:background="@color/colorTextGrey" />
+
+                    <Button
+                        android:id="@+id/btnCheckOut"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/view3"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_18sdp"
+                        android:background="@drawable/background_unfollow"
+                        android:text="@string/c_checkout"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/_12ssp" />
+
+
+                </RelativeLayout>-->
+
+                <RelativeLayout
+                    android:id="@+id/layout_related_product"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_25sdp"
+                    android:layout_weight="1">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/tvRelatedproduct"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:drawableRight="@drawable/ic_next"
+                                android:gravity="center_vertical"
+                                android:padding="5dp"
+                                android:text="@string/c_related_products"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/_12ssp"></TextView>
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/recyclerviewRelatedItem"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tvRelatedproduct"
+                                android:layout_marginTop="@dimen/_12sdp"
+                                android:nestedScrollingEnabled="false" />
+
+
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="?actionBarSize"
+                    android:layout_below="@id/cardview"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:background="#E0E0F5">
+
+                    <TextView
+                        android:id="@+id/safetext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="@dimen/_12sdp"
+                        android:drawableLeft="@drawable/ic_security"
+                        android:drawablePadding="@dimen/_12sdp"
+                        android:gravity="center"
+                        android:maxLines="2"
+                        android:text="@string/c_safe"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_10ssp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</LinearLayout>

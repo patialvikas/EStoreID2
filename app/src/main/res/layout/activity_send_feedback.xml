@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".ui.home.sendFeedback.SendFeedbackActivity">
+
+    <RelativeLayout
+        android:id="@+id/layoutBar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+       >
+
+        <ImageView
+            android:id="@+id/imgBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/_8sdp"
+            android:src="@drawable/ic_back_black" />
+
+        <TextView
+            android:id="@+id/tvTittle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/send_feedback"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_16ssp" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layoutBar"
+        android:layout_margin="@dimen/_25sdp">
+
+
+        <TextView
+            android:id="@+id/tvfeedback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:gravity="center"
+            android:lineSpacingExtra="10dp"
+            android:text="@string/send_feedback"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_22ssp" />
+
+        <TextView
+            android:id="@+id/tv_alertMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvfeedback"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:text="Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. "
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_14ssp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputFeedback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_alertMsg"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:textColor="@color/colorBlack"
+            android:textColorHint="@color/colorTextGrey"
+            android:theme="@style/MyTheme">
+
+            <EditText
+                android:id="@+id/editFeedback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/write_feedback"
+                android:inputType="textImeMultiLine"
+                android:textSize="@dimen/_14ssp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <TextView
+            android:id="@+id/tvSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:background="@drawable/background_unfollow"
+            android:gravity="center"
+            android:padding="@dimen/_12sdp"
+            android:text="@string/submit"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite">
+
+        </TextView>
+    </RelativeLayout>
+</RelativeLayout>

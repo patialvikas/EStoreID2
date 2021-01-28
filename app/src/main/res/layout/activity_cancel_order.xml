@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".ui.home.cancelOrder.CancelOrderActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize">
+
+        <ImageView
+            android:id="@+id/imgBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/_8sdp"
+            android:src="@drawable/ic_back_black" />
+
+        <TextView
+            android:id="@+id/tvTittle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/o_cancel_order"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_16ssp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:layout_margin="@dimen/_25sdp">
+
+        <ImageView
+            android:id="@+id/img_question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_question" />
+
+        <TextView
+            android:id="@+id/tv_cancel_Order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_question"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_35sdp"
+            android:gravity="center"
+            android:lineSpacingExtra="10dp"
+            android:text="@string/cancel_order"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_25ssp" />
+
+        <TextView
+            android:id="@+id/tv_alertMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_cancel_Order"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:gravity="center"
+            android:text="@string/order_delete"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_14ssp" />
+
+
+        <TextView
+            android:id="@+id/tvYesCancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tvNoCancel"
+            android:background="@drawable/background_unfollow"
+            android:gravity="center"
+            android:padding="@dimen/_12sdp"
+            android:text="@string/o_yes"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/tvNoCancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:gravity="center"
+            android:padding="@dimen/_12sdp"
+            android:text="@string/o_no"
+            android:textAllCaps="false"
+            android:textColor="@color/colorBlack">
+
+        </TextView>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.idestore">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application
+        android:name=".baseclass.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".ui.home.paymentActivity.PaymentActivity"></activity>
+        <activity android:name=".ui.home.Favorite.MyFavrouitActivity" />
+        <activity android:name=".ui.launch.LaunchActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/googleclientId" />
+
+        <activity android:name=".ui.home.cartActivity.CartActivity" />
+        <activity android:name=".ui.home.orderPlaced.OrderPlacedActivity" />
+        <activity android:name=".ui.home.paymentActivity.CheckOutActivity" />
+        <activity android:name=".ui.home.productDetails.ProductDetailsActivity" />
+        <activity android:name=".ui.home.productActivity.ProductListActivity" />
+        <activity android:name=".ui.settings.updatePhoneNumber.UpdatePhoneActivity" />
+        <activity android:name=".ui.settings.changePassword.ChnagePasswordActivity" />
+        <activity android:name=".ui.settings.editProfileActivity.EditProfileActivity" />
+        <activity android:name=".ui.settings.SettingsActivity" />
+        <activity android:name=".ui.home.myAccount.MyAccountActivity" />
+        <activity android:name=".ui.home.sendFeedback.SendFeedbackActivity" />
+        <activity android:name=".ui.home.cancelOrder.CancelOrderActivity" />
+        <activity android:name=".ui.home.myOrderDetails.MyOrderDetailsActivity" />
+        <activity android:name=".ui.home.myOrders.MyOrdersActivity" />
+        <activity android:name=".ui.home.myfavrouitStore.MyFavrouitStoreActivity" />
+        <activity android:name=".ui.authentication.verifiy.VerifiyActivity" />
+        <activity android:name=".ui.settings.termsCondition.TermsConditionActivity" />
+        <activity android:name=".ui.settings.privacyPolicy.PrivacyPolicyActivity" />
+        <activity android:name=".ui.authentication.forgotPasswordActivity.ForgotPasswordActivity" />
+        <activity android:name=".ui.authentication.signupActivity.SignUpActivity" />
+        <activity android:name=".ui.authentication.loginActivity.LoginActivity" />
+        <activity android:name=".ui.home.mainActivity.MainActivity" />
+
+        <meta-data
+            android:name="com.razorpay.ApiKey"
+            android:value="rzp_test_FKuwdrZUr3UJML"
+            />
+    </application>
+
+</manifest>

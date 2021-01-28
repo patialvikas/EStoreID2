@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".ui.settings.SettingsActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/colorWhite">
+
+        <ImageView
+            android:id="@+id/imgBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/_8sdp"
+            android:src="@drawable/ic_back_black" />
+
+        <TextView
+            android:id="@+id/tvTittle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/settings"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_16ssp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:layout_margin="@dimen/_18sdp">
+
+        <TextView
+            android:id="@+id/tvUpdateProfile"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:background="@color/colorLightWhite"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/_12sdp"
+            android:text="@string/edit_profile"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_12ssp" />
+
+        <TextView
+            android:id="@+id/tvUpdatePhone"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:layout_below="@+id/tvUpdateProfile"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:background="@color/colorLightWhite"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/_12sdp"
+            android:text="@string/update_phone"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_12ssp" />
+
+        <TextView
+            android:id="@+id/tvChangePassword"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:layout_below="@+id/tvUpdatePhone"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:background="@color/colorLightWhite"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/_12sdp"
+            android:text="@string/change_password"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_12ssp" />
+
+        <TextView
+            android:id="@+id/tvPrivacyPolicy"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:layout_below="@+id/tvChangePassword"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:background="@color/colorLightWhite"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/_12sdp"
+            android:text="@string/privacy_policy"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_12ssp" />
+
+        <TextView
+            android:id="@+id/tvTermsCondition"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:layout_below="@+id/tvPrivacyPolicy"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:background="@color/colorLightWhite"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/_12sdp"
+            android:text="@string/terms_conditions"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_12ssp" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/_18sdp"
+        android:background="@drawable/background_unfollow"
+        android:text="Logout"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/_12ssp" />
+</RelativeLayout>
